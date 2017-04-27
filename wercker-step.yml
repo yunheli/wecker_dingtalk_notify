@@ -1,0 +1,17 @@
+name: dingtalk-notify
+version: 0.0.1
+description: dingtalk
+keywords:
+  - notification
+  - dingtalk
+  - webhook
+properties:
+  webhook_url:
+    type: string
+    required: true
+  passed_message:
+    type: string
+    required: false
+  failed_message:
+    type: string
+    required: false
