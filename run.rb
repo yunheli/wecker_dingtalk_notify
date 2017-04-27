@@ -7,9 +7,6 @@ class DingTalk
   attr_accessor :webhook_url, :message
   def initialize(webhook_url, fail_message = nil, success_message = nil)
     self.webhook_url = webhook_url
-    self.message ||= fail_message
-    self.message ||= success_message
-    self.message ||= "测试"
   end
 
   def send(msg = nil)
@@ -29,6 +26,5 @@ class DingTalk
 end
 
 webhook_url = ENV["webhook_url"]
-success_message = ENV["passed_message"]
-fail_message = ENV["failed_message"]
-DingTalk.new(webhook_url, success_message, fail_message).send
+message = ENV["message"]
+DingTalk.new(webhook_url).send

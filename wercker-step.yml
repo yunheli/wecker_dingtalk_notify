@@ -9,9 +9,6 @@ properties:
   webhook_url:
     type: string
     required: true
-  passed_message:
-    type: string
-    required: false
-  failed_message:
+  message:
     type: string
     required: false
