@@ -25,6 +25,6 @@ class DingTalk
   end
 end
 
-webhook_url = ENV["webhook_url"]
-message = ENV["message"]
+webhook_url = ENV["WERCKER_DINGTALK_NOTIFY_WEBHOOK_URL"]
+message = ENV["WERCKER_DINGTALK_NOTIFY_MESSAGE"]
 DingTalk.new(webhook_url).send(message)
