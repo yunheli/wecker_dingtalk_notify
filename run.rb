@@ -10,8 +10,8 @@ class DingTalk
   end
 
   def send(msg = nil)
-    message = msg unless msg
-    RestClient.post(webhook_url, payload.to_json, {content_type: :json})
+    self.message = msg if msg
+    res = RestClient.post(webhook_url, payload.to_json, {content_type: :json})
   end
 
   def payload
@@ -27,4 +27,4 @@ end
 
 webhook_url = ENV["webhook_url"]
 message = ENV["message"]
-DingTalk.new(webhook_url).send
+DingTalk.new(webhook_url).send(message)
