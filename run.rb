@@ -21,7 +21,7 @@ class DingTalk
     {
        "msgtype"=> "markdown",
        "markdown"=> {
-           "title"=>"消息来了",
+           "title"=>"消息来了 ",
            "text"=> message
        }
     }
