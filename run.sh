@@ -21,7 +21,7 @@ if which ruby > /dev/null 2>&1 ; then
       gem install bundler
     fi
 
-    echo "Installing slack-notifier..."
+    echo "Installing dinta-notifier..."
     bundle install
 
     bundle exec $WERCKER_STEP_ROOT/run.rb
@@ -30,7 +30,7 @@ if which ruby > /dev/null 2>&1 ; then
       sudo gem install bundler
     fi
 
-    echo "Installing slack-notifier as root..."
+    echo "Installing dinta-notifier as root..."
     sudo bundle install
 
     sudo -E bundle exec $WERCKER_STEP_ROOT/run.rb
